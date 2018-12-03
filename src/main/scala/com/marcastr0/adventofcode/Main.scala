@@ -32,6 +32,8 @@ object Main extends App {
   println("--- Day 1: Chronal Calibration ---")
   println("The resulting frequency after all of the changes in frequency have been applied is "
     + DayOne.partOne(DayOne.parseInput(dayOneInput), 0).toString)
+  println("The first frequency the device reaches twice is "
+    + DayOne.partTwo(DayOne.parseInput(dayOneInput), 0).toString)
   println
 
 }

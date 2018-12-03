@@ -18,4 +18,11 @@ class DayOneSpec extends FlatSpec {
     assert(DayOne.partOne(List(-1, -2, -3), 0) == -6)
   }
 
+  "partTwo" should "return the first frequency that is reached twice" in {
+    assert(DayOne.partTwo(List(1, -2, 3, 1), 0) == 2)
+    assert(DayOne.partTwo(List(1, -1), 0) == 0)
+    assert(DayOne.partTwo(List(3, 3, 4, -2, -4), 0) == 10)
+    assert(DayOne.partTwo(List(7, 7, -2, -7, -4), 0) == 14)
+  }
+
 }
