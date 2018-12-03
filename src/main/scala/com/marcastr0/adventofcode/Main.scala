@@ -42,5 +42,6 @@ object Main extends App {
   val dayTwoInput = Source.fromResource("DayTwo.txt").getLines.toList
   println("--- Day 2: Inventory Management System ---")
   println("The checksum for the list of box IDs is " + DayTwo.partOne(dayTwoInput))
+  println("The common letters between the two correct box IDs are " + DayTwo.partTwo(dayTwoInput))
   println
 }

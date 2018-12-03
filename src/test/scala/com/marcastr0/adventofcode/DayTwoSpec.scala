@@ -22,4 +22,8 @@ class DayTwoSpec extends FlatSpec {
     assert(!DayTwo.differByOne("abcde", "axcye"))
     assert(DayTwo.differByOne("fghij", "fguij"))
   }
+
+  "partTwo" should "return the commen letters between the two correct box IDs" in {
+    assert(DayTwo.partTwo(List("abcde", "fghij", "klmno", "pqrst", "fguij", "axcye", "wvxyz")) == "fgij")
+  }
 }
