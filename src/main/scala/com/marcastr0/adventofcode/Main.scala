@@ -36,4 +36,11 @@ object Main extends App {
     + DayOne.partTwo(DayOne.parseInput(dayOneInput), 0).toString)
   println
 
+  /*
+  * Solution for Day 2: https://adventofcode.com/2018/day/2
+  */
+  val dayTwoInput = Source.fromResource("DayTwo.txt").getLines.toList
+  println("--- Day 2: Inventory Management System ---")
+  println("The checksum for the list of box IDs is " + DayTwo.partOne(dayTwoInput))
+  println
 }
