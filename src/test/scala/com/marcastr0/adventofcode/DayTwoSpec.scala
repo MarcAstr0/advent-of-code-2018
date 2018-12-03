@@ -17,4 +17,9 @@ class DayTwoSpec extends FlatSpec {
   "partOne" should "calculate the checksum for a list of IDs" in {
     assert(DayTwo.partOne(List("abcdef", "bababc", "abbcde", "abcccd", "aabcdd", "abcdee", "ababab")) == 12)
   }
+
+  "differByOne" should "return true if the 2 strings differ by exactly one character and false if not" in {
+    assert(!DayTwo.differByOne("abcde", "axcye"))
+    assert(DayTwo.differByOne("fghij", "fguij"))
+  }
 }

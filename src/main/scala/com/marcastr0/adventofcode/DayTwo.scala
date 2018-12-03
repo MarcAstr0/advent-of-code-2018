@@ -13,4 +13,8 @@ object DayTwo {
     )).foldLeft((0, 0))((a, b) => (a._1 + b._1, a._2 + b._2))
     counts._1 * counts._2
   }
+
+  def differByOne(x: String, y: String): Boolean = {
+    if ((x.toList zip y.toList).map(z => z._1 ^ z._2).filterNot(_ == 0).length == 1) true else false
+  }
 }
