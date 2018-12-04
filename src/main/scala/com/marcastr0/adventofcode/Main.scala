@@ -44,4 +44,13 @@ object Main extends App {
   println("The checksum for the list of box IDs is " + DayTwo.partOne(dayTwoInput))
   println("The common letters between the two correct box IDs are " + DayTwo.partTwo(dayTwoInput))
   println
+
+  /*
+  * Solution for Day 3: https://adventofcode.com/2018/day/3
+  */
+  val dayThreeInput = Source.fromResource("DayThree.txt").getLines.toList.map(DayThree.parseClaim)
+  println("--- Day 3: No Matter How You Slice It ---")
+  println("The number of square inches of fabric that are within two or more claims is " +
+    DayThree.partOne(dayThreeInput))
+  println
 }
