@@ -17,9 +17,9 @@ class DayThreeSpec extends FlatSpec {
   }
 
   "overlappingSquares" should "count the number of squares of fabric that overlap between 2 claims" in {
-    val claim1 = DayThree.parseClaim("#1 @ 1,3: 4x4")
-    val claim2 = DayThree.parseClaim("#2 @ 3,1: 4x4")
-    val claim3 = DayThree.parseClaim("#3 @ 5,5: 2x2")
+    val claim1 = DayThree.getSquares(DayThree.parseClaim("#1 @ 1,3: 4x4"))
+    val claim2 = DayThree.getSquares(DayThree.parseClaim("#2 @ 3,1: 4x4"))
+    val claim3 = DayThree.getSquares(DayThree.parseClaim("#3 @ 5,5: 2x2"))
     assert(DayThree.overlappingSquares(claim1, claim2) == Set((3, 3), (3, 4), (4, 3), (4, 4)))
     assert(DayThree.overlappingSquares(claim1, claim3) == Set())
     assert(DayThree.overlappingSquares(claim1, claim3) == Set())

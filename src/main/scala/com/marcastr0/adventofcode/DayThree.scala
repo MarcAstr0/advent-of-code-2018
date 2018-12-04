@@ -18,11 +18,11 @@ object DayThree {
     } yield (i, j)).toSet
   }
 
-  def overlappingSquares(a: Claim, b: Claim): Set[(Int, Int)] = getSquares(a) intersect getSquares(b)
+  def overlappingSquares(a: Set[(Int, Int)], b: Set[(Int, Int)]): Set[(Int, Int)] = a intersect b
 
-  //FIXME this solution runs very slow, must think of a better one
+  //FIXME this solution can be improved
   def partOne(claims: List[Claim]): Int = {
-    val combinations = claims.combinations(2).toList.map(x => (x.head, x.tail.head))
+    val combinations = claims.map(getSquares).combinations(2).toList.map(x => (x.head, x.tail.head))
     combinations.map(y => overlappingSquares(y._1, y._2)).reduce(_ union _).size
   }
 }
