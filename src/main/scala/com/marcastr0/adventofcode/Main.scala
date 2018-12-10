@@ -53,4 +53,12 @@ object Main extends App {
   println("The number of square inches of fabric that are within two or more claims is " +
     DayThree.partOne(dayThreeInput))
   println
+
+  /*
+  * Solution for Day 5: https://adventofcode.com/2018/day/5
+  */
+  val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString
+  println("--- Day 5: Alchemical Reduction ---")
+  println("The number of units that remain after fully reacting the polymer is " + DayFive.partOne(dayFiveInput))
+  println
 }
