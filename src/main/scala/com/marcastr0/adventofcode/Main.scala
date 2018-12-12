@@ -60,5 +60,6 @@ object Main extends App {
   val dayFiveInput = Source.fromResource("DayFive.txt").getLines.mkString
   println("--- Day 5: Alchemical Reduction ---")
   println("The number of units that remain after fully reacting the polymer is " + DayFive.partOne(dayFiveInput))
+  println("The length of the shortest polymer you can produce is " + DayFive.partTwo(dayFiveInput))
   println
 }

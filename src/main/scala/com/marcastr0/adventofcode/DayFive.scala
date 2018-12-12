@@ -15,4 +15,9 @@ object DayFive {
   def applyReactions(polymer: String): String = polymer.toList.map(_.toString).reduce(reactWith)
 
   def partOne(polymer: String): Int = applyReactions(polymer).length
+
+  def partTwo(polymer: String): Int = {
+    val units = polymer.toLowerCase.toSet
+    units.map(u => partOne(polymer.filterNot(Set(u, u.toUpper)))).min
+  }
 }

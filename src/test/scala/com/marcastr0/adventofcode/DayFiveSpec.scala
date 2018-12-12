@@ -28,4 +28,8 @@ class DayFiveSpec extends FlatSpec {
     assert(DayFive.partOne("aabAAB") == 6)
     assert(DayFive.partOne("dabAcCaCBAcCcaDA") == 10)
   }
+
+  "partTwo" should "return the length of the shortest polymer you can produce" in {
+    assert(DayFive.partTwo("dabAcCaCBAcCcaDA") == 4)
+  }
 }
